@@ -15,9 +15,3 @@ export const SubTitle = styled.h2`
   text-align: center;
   margin: 20px 0;
 `;
-
-export const EmptyContactListText = styled.p`
-  text-align: center;
-  font-size: 18px;
-  font-weight: 700;
-`;

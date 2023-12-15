@@ -5,3 +5,9 @@ export const Contacts = styled.ul`
   flex-direction: column;
   gap: 5px;
 `;
+
+export const EmptyContactListText = styled.p`
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+`;

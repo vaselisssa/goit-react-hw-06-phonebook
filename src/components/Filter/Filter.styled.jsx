@@ -28,4 +28,9 @@ export const FilterInput = styled.input`
     outline: none;
     box-shadow: 0px 0px 4px 2px #8a9ec1;
   }
+
+  &:disabled {
+    border: 1px solid #8a9ec1;
+    box-shadow: none;
+  }
 `;

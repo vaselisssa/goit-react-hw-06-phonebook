@@ -1,8 +1,12 @@
-import React from 'react';
+import { useDispatch } from 'react-redux';
 import { FaRegTrashCan } from 'react-icons/fa6';
+import { deleteContact } from '../../redux/contactSlice';
 import { Contact, Text, DeleteButton } from './ContactItem.styled';
 
-const ContactItem = ({ contact, onDeleteContact }) => {
+const ContactItem = ({ contact }) => {
+  const dispatch = useDispatch();
+  const handleDelete = () => dispatch(deleteContact(contact.id));
+
   return (
     <Contact key={contact.id}>
       <Text>
@@ -10,7 +14,7 @@ const ContactItem = ({ contact, onDeleteContact }) => {
       </Text>
       <DeleteButton
         type="button"
-        onClick={() => onDeleteContact(contact.id)}
+        onClick={handleDelete}
         aria-label="Delete contact"
       >
         <FaRegTrashCan />
